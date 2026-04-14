@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --heading-font: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page-bg: #07141c;
+  --page-bg-soft: #0d202c;
+  --panel-bg: rgba(10, 32, 44, 0.72);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --panel-shadow: 0 24px 80px rgba(3, 10, 16, 0.38);
+  --heading-color: #f8fbfc;
+  --muted-color: #b3c3ca;
+  --accent-color: #ffb03b;
+  --accent-soft: #ffd18c;
+  --focus-ring: #7dd3fc;
+  --input-bg: rgba(3, 15, 22, 0.64);
+  --input-border: rgba(179, 195, 202, 0.24);
+  --input-placeholder-color: rgba(232, 244, 247, 0.46);
+  --page-glow-primary: rgba(255, 176, 59, 0.18);
+  --page-glow-secondary: rgba(74, 222, 128, 0.12);
+  --body-glow-primary: rgba(255, 127, 80, 0.12);
+  --body-glow-secondary: rgba(125, 211, 252, 0.12);
+  --body-overlay-start: rgba(7, 20, 28, 0.86);
+  --body-overlay-end: rgba(7, 20, 28, 1);
+  --body-orb-primary: rgba(255, 176, 59, 0.22);
+  --body-orb-secondary: rgba(61, 190, 255, 0.18);
+  --panel-highlight: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+  --metric-card-bg: rgba(6, 24, 34, 0.56);
+  --metric-card-border: rgba(255, 255, 255, 0.22);
+  --accent-card-radial: rgba(255, 176, 59, 0.4);
+  --accent-card-bg: linear-gradient(135deg, rgba(255, 137, 66, 0.28), rgba(11, 34, 46, 0.94));
+  --card-bg: rgba(7, 28, 39, 0.68);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --secondary-surface-bg: rgba(255, 255, 255, 0.08);
+  --secondary-surface-border: rgba(255, 255, 255, 0.14);
+  --subtle-accent-bg: rgba(255, 176, 59, 0.14);
+  --subtle-accent-border: rgba(255, 176, 59, 0.22);
+  --highlight-radial: rgba(74, 222, 128, 0.28);
+  --highlight-bg: linear-gradient(135deg, rgba(11, 34, 46, 0.96), rgba(20, 58, 74, 0.86));
+  --highlight-border: rgba(74, 222, 128, 0.22);
+  --best-entry-border: rgba(74, 222, 128, 0.32);
+  --best-entry-shadow: inset 0 0 0 1px rgba(74, 222, 128, 0.12);
+  --empty-bg: rgba(7, 28, 39, 0.42);
+  --empty-border: rgba(255, 255, 255, 0.18);
+  --photo-backdrop: rgba(3, 15, 22, 0.78);
+  --photo-image-bg: rgba(7, 28, 39, 0.9);
+  --file-button-bg: rgba(255, 255, 255, 0.12);
+  --file-button-hover-bg: rgba(255, 176, 59, 0.2);
+  --file-button-focus-bg: rgba(255, 176, 59, 0.24);
+  --theme-selector-bg: rgba(7, 28, 39, 0.42);
+  --theme-selector-border: rgba(255, 255, 255, 0.14);
+  --theme-selector-shadow: 0 24px 60px rgba(3, 10, 16, 0.24);
+  --theme-selector-track-bg: rgba(3, 15, 22, 0.42);
+  --theme-selector-track-border: rgba(179, 195, 202, 0.12);
+  --theme-selector-active-bg: linear-gradient(135deg, #ffb03b, #ff7f50);
+  --theme-selector-active-color: #13232e;
+  --theme-selector-active-shadow: 0 12px 24px rgba(255, 127, 80, 0.24);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --page-bg: #edf3f5;
+  --page-bg-soft: #f9fbfc;
+  --panel-bg: rgba(255, 255, 255, 0.76);
+  --border-color: rgba(16, 37, 52, 0.12);
+  --panel-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+  --heading-color: #102534;
+  --muted-color: #5a6d78;
+  --accent-color: #d97706;
+  --accent-soft: #b86b08;
+  --focus-ring: #0ea5e9;
+  --input-bg: rgba(244, 247, 249, 0.9);
+  --input-border: rgba(16, 37, 52, 0.12);
+  --input-placeholder-color: rgba(90, 109, 120, 0.72);
+  --page-glow-primary: rgba(217, 119, 6, 0.18);
+  --page-glow-secondary: rgba(14, 165, 233, 0.14);
+  --body-glow-primary: rgba(249, 115, 22, 0.12);
+  --body-glow-secondary: rgba(14, 165, 233, 0.12);
+  --body-overlay-start: rgba(249, 251, 252, 0.94);
+  --body-overlay-end: rgba(236, 244, 247, 1);
+  --body-orb-primary: rgba(249, 115, 22, 0.12);
+  --body-orb-secondary: rgba(14, 165, 233, 0.1);
+  --panel-highlight: linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0));
+  --metric-card-bg: rgba(249, 251, 252, 0.88);
+  --metric-card-border: rgba(16, 37, 52, 0.08);
+  --accent-card-radial: rgba(217, 119, 6, 0.2);
+  --accent-card-bg: linear-gradient(135deg, rgba(255, 247, 237, 0.98), rgba(255, 236, 210, 0.9));
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(16, 37, 52, 0.08);
+  --secondary-surface-bg: rgba(255, 255, 255, 0.68);
+  --secondary-surface-border: rgba(16, 37, 52, 0.12);
+  --subtle-accent-bg: rgba(217, 119, 6, 0.1);
+  --subtle-accent-border: rgba(217, 119, 6, 0.16);
+  --highlight-radial: rgba(34, 197, 94, 0.16);
+  --highlight-bg: linear-gradient(135deg, rgba(240, 253, 244, 0.98), rgba(224, 242, 254, 0.92));
+  --highlight-border: rgba(34, 197, 94, 0.22);
+  --best-entry-border: rgba(34, 197, 94, 0.2);
+  --best-entry-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.12);
+  --empty-bg: rgba(255, 255, 255, 0.58);
+  --empty-border: rgba(16, 37, 52, 0.14);
+  --photo-backdrop: rgba(236, 244, 247, 0.82);
+  --photo-image-bg: rgba(244, 247, 249, 0.96);
+  --file-button-bg: rgba(255, 255, 255, 0.8);
+  --file-button-hover-bg: rgba(217, 119, 6, 0.14);
+  --file-button-focus-bg: rgba(217, 119, 6, 0.18);
+  --theme-selector-bg: rgba(255, 255, 255, 0.74);
+  --theme-selector-border: rgba(16, 37, 52, 0.12);
+  --theme-selector-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --theme-selector-track-bg: rgba(244, 247, 249, 0.96);
+  --theme-selector-track-border: rgba(16, 37, 52, 0.08);
+  --theme-selector-active-bg: linear-gradient(135deg, #f59e0b, #fb923c);
+  --theme-selector-active-color: #13232e;
+  --theme-selector-active-shadow: 0 10px 24px rgba(245, 158, 11, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, var(--page-glow-primary), transparent 30%),
+    radial-gradient(circle at top right, var(--page-glow-secondary), transparent 24%),
+    linear-gradient(180deg, var(--page-bg-soft), var(--page-bg));
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--muted-color);
+  background:
+    radial-gradient(circle at 15% 20%, var(--body-glow-primary), transparent 0 28%),
+    radial-gradient(circle at 85% 15%, var(--body-glow-secondary), transparent 0 24%),
+    linear-gradient(180deg, var(--body-overlay-start), var(--body-overlay-end));
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  opacity: 0.42;
+}
+
+body::before {
+  top: -7rem;
+  right: -5rem;
+  background: var(--body-orb-primary);
+}
+
+body::after {
+  bottom: -9rem;
+  left: -6rem;
+  background: var(--body-orb-secondary);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(255, 176, 59, 0.28);
+  color: var(--heading-color);
+}
