@@ -221,6 +221,42 @@ npm run lint
 npm run preview
 ```
 
+## Demo online
+
+La demo e pensata per essere pubblicata su GitHub Pages a questo URL:
+
+`https://phenixita.github.io/benza-tracker/`
+
+## Deploy su GitHub Pages
+
+Il progetto e configurato come **project site** GitHub Pages e usa il base path:
+
+```ts
+/benza-tracker/
+```
+
+### Pubblicazione automatica
+
+E presente il workflow GitHub Actions:
+
+`/.github/workflows/deploy-pages.yml`
+
+Il workflow:
+
+1. installa le dipendenze con `npm ci`
+2. esegue `npm run build`
+3. pubblica la cartella `dist` su GitHub Pages
+
+Per attivarlo nel repository GitHub:
+
+1. apri **Settings > Pages**
+2. imposta **Source** su **GitHub Actions**
+3. fai push sul branch principale (`main` o `master`) oppure avvia il workflow manualmente
+
+### Nota sul branch principale
+
+Il workflow ascolta `main` e `master`. Se il repository usa un branch diverso, aggiorna la sezione `on.push.branches` del workflow.
+
 ### Stack Tecnologico
 
 - **React 19.x**: Framework UI
